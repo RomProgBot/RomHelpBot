@@ -3,7 +3,7 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, ContextTypes, filters
 
 # Получаем токен из переменной окружения (безопаснее)
-BOT_TOKEN = os.getenv("8150614057:AAEqqWs0ERAolQE2j2CXu3eNVPYqcDhhVsA")
+BOT_TOKEN = ("8150614057:AAEqqWs0ERAolQE2j2CXu3eNVPYqcDhhVsA")
 
 # Обработчик команды /start
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
