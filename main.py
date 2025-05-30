@@ -1,23 +1,21 @@
+import os
 from telegram import Update
-from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
+from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, ContextTypes, filters
 
-# Ваш токен Telegram бота
-BOT_TOKEN = '8150614057:AAFQBLhyfngDmactCk1ize_QT3imIX1L4l0'
+# Получаем токен из переменной окружения (безопаснее)
+BOT_TOKEN = os.getenv("8150614057:AAFQBLhyfngDmactCk1ize_QT3imIX1L4l0")
 
-
-
+# Обработчик команды /start
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    welcome_text = (
-        "Приветствую!\n"
-        "Это бот обратной связи. Сообщения любого формата приветствуются.\n\n"
-        "Связь с разработчиком гарантирована!"
+    await update.message.reply_text(
+        "Приветствую! Оставь запрос (желательно одним сообщением)"
     )
-    await update.message.reply_text(welcome_text)
 
+# Обработчик всех остальных сообщений
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    # Здесь можно реализовать логирование сообщений или пересылку админу
-    await update.message.reply_text("Спасибо за сообщение! Мы свяжемся с вами при необходимости.")
+    await update.message.reply_text("Запрос принят. Ожидайте ответ!")
 
+# Запуск бота
 if __name__ == '__main__':
     app = ApplicationBuilder().token(BOT_TOKEN).build()
 
