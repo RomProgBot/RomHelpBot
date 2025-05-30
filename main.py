@@ -2,7 +2,7 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
 
 # Ваш токен Telegram бота
-BOT_TOKEN = '8150614057:AAF6qM6JXUsTpAs7-g-pGI7zIVdLXCu6k4Y'
+BOT_TOKEN = '8150614057:AAFQBLhyfngDmactCk1ize_QT3imIX1L4l0'
 
 
 
