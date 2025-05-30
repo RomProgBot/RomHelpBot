@@ -5,11 +5,7 @@ from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, Con
 # Получаем токен из переменной окружения (безопаснее)
 BOT_TOKEN = ("8150614057:AAEqqWs0ERAolQE2j2CXu3eNVPYqcDhhVsA")
 
-# Обработчик команды /start
-async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text(
-        "Приветствую! Оставь запрос (желательно одним сообщением)"
-    )
+
 
 # Обработчик всех остальных сообщений
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
