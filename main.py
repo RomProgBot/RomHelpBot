@@ -2,7 +2,7 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
 
 # Ваш токен Telegram бота
-BOT_TOKEN = '8150614057:AAFvD0ezkmHzk-TQKUWHXDg3458P0RwDVEk'
+BOT_TOKEN = '8150614057:AAF6qM6JXUsTpAs7-g-pGI7zIVdLXCu6k4Y'
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     welcome_text = (
